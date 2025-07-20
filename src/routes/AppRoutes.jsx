@@ -13,7 +13,11 @@ import AdminDashboard from "../pages/Admin/AdminDashboard";
 // Teacher routes
 import AuthPages from "../pages/Auth/AuthPages";
 import TeacherDashboard from "../pages/Teacher/TeacherDashboard";
+import AwakeningNations from "../pages/Viewer/Main/AwakeningNations";
 import FAQPage from "../pages/Viewer/Main/components/FAQPage";
+import MediaLayout from "../pages/Viewer/Main/components/MediaLayout";
+import ReachingUnreached from "../pages/Viewer/Main/ReachingUnreached";
+import TeachingWord from "../pages/Viewer/Main/TeachingWord";
 
 // Optional: 404 Not Found component
 const NotFound = () => (
@@ -59,6 +63,13 @@ const AppRoutes = () => {
 
       {/* Catch-all route for 404 */}
       <Route path="*" element={<NotFound />} />
+
+      {/* Media routes */}
+      <Route path="/media" element={<MediaLayout />}>
+        <Route path="teaching-word" element={<TeachingWord />} />
+        <Route path="awakening-nations" element={<AwakeningNations />} />
+        <Route path="reaching-unreached" element={<ReachingUnreached />} />
+      </Route>
     </Routes>
   );
 };
