@@ -496,7 +496,7 @@ const DonatePage = () => {
                 </h2>
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Amount to be donated:
+                    Amount to be given:
                   </label>
                   <div className="px-3 py-2 bg-gray-100 border border-gray-300 rounded-md font-semibold text-gray-800">
                     Rs {getCurrentAmount() || "0"}
@@ -736,7 +736,7 @@ const DonatePage = () => {
                         Processing...
                       </span>
                     ) : (
-                      "Accept & DONATE"
+                      "Accept & GIVE"
                     )}
                   </button>
                   <button

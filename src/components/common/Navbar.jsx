@@ -21,18 +21,18 @@ function Navbar() {
         {/* Media Dropdown */}
         <MediaDropdown />
 
-        <button
+        {/* <button
           onClick={() => handleNavigation("/resources")}
           className="transition duration-300 ease-in-out hover:underline hover:underline-offset-4"
         >
           Resources
-        </button>
+        </button> */}
 
         <button
           onClick={() => handleNavigation("/about")}
           className="transition duration-300 ease-in-out hover:underline hover:underline-offset-4"
         >
-          About Us
+          About
         </button>
 
         <button
@@ -43,20 +43,14 @@ function Navbar() {
         </button>
 
         <button
-          onClick={() => handleNavigation("/faq")}
-          className="transition duration-300 ease-in-out hover:underline hover:underline-offset-4"
-        >
-          FAQs
-        </button>
-
-        <button
           onClick={() => handleNavigation("/donate")}
           className="hover:text-green-600 transition duration-200 ease-in-out hover:underline hover:underline-offset-4"
         >
-          Donate
+          Give
         </button>
-
-        <RoleDropdown />
+        <span className="-mt-3">
+          <RoleDropdown />
+        </span>
       </div>
     </nav>
   );
@@ -73,7 +67,7 @@ function MediaDropdown() {
   };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-center">
       {/* Media Button with Dropdown */}
       <button
         onClick={() => setIsOpen(!isOpen)}
