@@ -59,42 +59,38 @@ function MediaDropdown() {
 
   const handleNavigation = (path) => {
     navigate(path);
-    setIsOpen(false); // Close dropdown after navigation
+    setIsOpen(false);
   };
 
   return (
-    <div className="relative inline-block text-center">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-1 transition duration-300 ease-in-out hover:underline hover:underline-offset-4"
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)} // Added onMouseLeave for better UX
-      >
+    <div
+      className="relative inline-block text-center"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <button className="flex items-center space-x-1 transition duration-300 ease-in-out hover:underline hover:underline-offset-4">
         <span>Media</span>
         <ChevronDown className="w-4 h-4" />
       </button>
 
       {isOpen && (
-        <div
-          className="absolute left-0 mt-2 w-64 bg-white border border-gray-300 rounded-lg shadow-lg z-50"
-          onMouseLeave={() => setIsOpen(false)}
-        >
+        <div className="absolute left-0 w-64 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
           <div className="py-1">
             <button
               onClick={() => handleNavigation("/media/teaching-word")}
-              className="w-full text-left px-4 py-2 hover:bg-blue-50 transition duration-300 ease-in-out"
+              className="w-full text-left px-4 py-2 hover:bg-blue-50 transition"
             >
               Teaching the Word
             </button>
             <button
               onClick={() => handleNavigation("/media/awakening-nations")}
-              className="w-full text-left px-4 py-2 hover:bg-blue-50 transition duration-300 ease-in-out"
+              className="w-full text-left px-4 py-2 hover:bg-blue-50 transition"
             >
               Awakening the Nations
             </button>
             <button
               onClick={() => handleNavigation("/media/reaching-unreached")}
-              className="w-full text-left px-4 py-2 hover:bg-blue-50 transition duration-300 ease-in-out"
+              className="w-full text-left px-4 py-2 hover:bg-blue-50 transition"
             >
               Reaching the Unreached
             </button>
@@ -111,16 +107,13 @@ function RoleDropdown() {
 
   const handleNavigation = (path) => {
     navigate(path);
-    setIsOpen(false); // Close dropdown
+    setIsOpen(false); // Close dropdown after navigation
   };
 
   return (
-    // --- MODIFIED LINE ---
-    // Removed 'mt-2' from the container
     <div className="relative inline-block text-left">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        onBlur={() => setIsOpen(false)} // Close when clicking away
         className="text-gray-500 w-8 h-8 rounded-full flex items-center justify-center focus:outline-none"
       >
         <CircleUserRound />

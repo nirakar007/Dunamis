@@ -139,7 +139,7 @@ const AwakeningNations = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-rose-500 to-orange-500 rounded-2xl p-8 mb-12 text-white">
+      <div className="bg-gradient-to-r from-custom-blue to-cyan-200 rounded-2xl p-8 mb-12 text-white">
         <h1 className="text-4xl font-bold mb-4">Awakening the Nations</h1>
         <p className="text-lg opacity-90 max-w-2xl">
           Experience powerful testimonies and worship as we witness God's work
@@ -158,8 +158,8 @@ const AwakeningNations = () => {
             onClick={() => setActiveTab(tab.id)}
             className={`flex-1 flex items-center justify-center space-x-2 py-3 text-sm font-medium rounded-md transition-colors ${
               activeTab === tab.id
-                ? "bg-white shadow text-gray-900"
-                : "text-gray-600 hover:text-gray-900"
+                ? "border border-custom-blue bg-custom-blue bg-opacity-15 text-gray-900"
+                : "text-gray-400 bg-gray-200 hover:text-gray-900"
             }`}
           >
             <tab.icon className="w-5 h-5" />
